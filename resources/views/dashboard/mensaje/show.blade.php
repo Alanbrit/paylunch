@@ -7,11 +7,14 @@
     <title>Mensajes</title>
 </head>
 <body>
-    <h1>Detalle del mensaje</h1>
-    <p>Contenido</p>
-    <div>{{$mensaje->contenido}}</div>
-    <p>Emisor</p>
-    <p>{{ $mensaje->emisor->name }} {{ $mensaje->emisor->apellidos }}</p>
-    <p>Receptor</p>
-    <p>{{ $mensaje->receptor->name }} {{ $mensaje->receptor->apellidos }}</p>
+    <div class="w-full max-w-xs mx-auto">
+    <p class="mt-2 flex items-center text-sky-800">Contenido</p>
+    <div class="mt-2 flex items-center text-sky-600">{{$mensaje->contenido}}</div>
+    <br>
+    <p class="mt-2 flex items-center text-sky-800">Emisor</p>
+    <p class="mt-2 flex items-center text-sky-600">{{ $mensaje->emisor->name }} {{ $mensaje->emisor->apellidos }}</p>
+    <br>
+    <p class="mt-2 flex items-center text-sky-800">Receptor</p>
+    <p class="mt-2 flex items-center text-sky-600">{{ $mensaje->receptor->name }} {{ $mensaje->receptor->apellidos }}</p>
+    </div>
 @endsection

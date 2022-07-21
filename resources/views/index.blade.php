@@ -56,12 +56,12 @@
 		<div class="overlay overlay-boxify">
 			<nav>
 				<ul>
-					<li><a href="#about"><i class="fa fa-credit-card"></i>Pagar</a></li>
-					<li><a href="#features"><i class="fa fa-user"></i>Mis datos</a></li>
+					<li><a href="#"><i class="fa fa-credit-card"></i>Pagar</a></li>
+					<li><a href="#"><i class="fa fa-user"></i>Mis datos</a></li>
 				</ul>
 				<ul>
-					<li><a href="#screenshots"><i class="fa fa-comment"></i>Mensajes</a></li>
-					<li><a href="#download"><i class="fa fa-cutlery"></i>Menú</a></li>
+					<li><a href="#"><i class="fa fa-comment"></i>Mensajes</a></li>
+					<li><a href="#"><i class="fa fa-cutlery"></i>Menú</a></li>
 				</ul>
                 <ul>
                     <form method="POST" action="{{ route('logout') }}">

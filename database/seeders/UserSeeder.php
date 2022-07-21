@@ -191,7 +191,7 @@ class UserSeeder extends Seeder
             'email' => 'tutor11',
             'password' => bcrypt('12345678'),
             'id_escuela' => 2,
-            'id_grupo' => 1,
+            'id_grupo' => 7,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -205,7 +205,7 @@ class UserSeeder extends Seeder
             'email' => 'tutor12',
             'password' => bcrypt('12345678'),
             'id_escuela' => 2,
-            'id_grupo' => 1,
+            'id_grupo' => 7,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -219,7 +219,7 @@ class UserSeeder extends Seeder
             'email' => 'tutor13',
             'password' => bcrypt('12345678'),
             'id_escuela' => 2,
-            'id_grupo' => 2,
+            'id_grupo' => 8,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -233,7 +233,7 @@ class UserSeeder extends Seeder
             'email' => 'tutor14',
             'password' => bcrypt('12345678'),
             'id_escuela' => 2,
-            'id_grupo' => 2,
+            'id_grupo' => 8,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -247,7 +247,7 @@ class UserSeeder extends Seeder
             'email' => 'tutor15',
             'password' => bcrypt('12345678'),
             'id_escuela' => 2,
-            'id_grupo' => 3,
+            'id_grupo' => 9,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -261,7 +261,7 @@ class UserSeeder extends Seeder
             'email' => 'tutor16',
             'password' => bcrypt('12345678'),
             'id_escuela' => 2,
-            'id_grupo' => 3,
+            'id_grupo' => 9,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -275,7 +275,7 @@ class UserSeeder extends Seeder
             'email' => 'tutor17',
             'password' => bcrypt('12345678'),
             'id_escuela' => 2,
-            'id_grupo' => 4,
+            'id_grupo' => 10,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -289,7 +289,7 @@ class UserSeeder extends Seeder
             'email' => 'tutor18',
             'password' => bcrypt('12345678'),
             'id_escuela' => 2,
-            'id_grupo' => 4,
+            'id_grupo' => 10,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -303,7 +303,7 @@ class UserSeeder extends Seeder
             'email' => 'tutor19',
             'password' => bcrypt('12345678'),
             'id_escuela' => 2,
-            'id_grupo' => 5,
+            'id_grupo' => 11,
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -317,7 +317,7 @@ class UserSeeder extends Seeder
             'email' => 'tutor20',
             'password' => bcrypt('12345678'),
             'id_escuela' => 2,
-            'id_grupo' => 5,
+            'id_grupo' => 11,
             'created_at' => now(),
             'updated_at' => now()
         ]);

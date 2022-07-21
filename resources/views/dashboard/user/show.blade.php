@@ -1,18 +1,19 @@
 @extends('dashboard.layout')
 @section('content')
-    <h1>Detalle del usuario</h1>
-    <p>Nombre</p>
-    <div>{{$user->name}}</div>
-    <p>Apellidos</p>
-    <div>{{$user->apellidos}}</div>
-    <p>Numero</p>
-    <div>{{$user->numero}}</div>
-    <p>Segundo numero</p>
-    <div>{{$user->numero_2}}</div>
-    <p>Username</p>
-    <div>{{$user->email}}</div>
-    <p>Saldo</p>
-    <div>{{$user->saldo}}</div>
-    <p>Grupo</p>
-    <div>{{$user->grupo->grado}} {{$user->grupo->grupo}}</div>
+    <div class="w-full max-w-xs mx-auto">
+        <p class="mt-2 flex items-center text-sky-800">Nombre</p>
+        <div class="mt-2 flex items-center text-sky-600">{{$user->name}}</div>
+        <p class="mt-2 flex items-center text-sky-800">Apellidos</p>
+        <div class="mt-2 flex items-center text-sky-600">{{$user->apellidos}}</div>
+        <p class="mt-2 flex items-center text-sky-800">Numero</p>
+        <div class="mt-2 flex items-center text-sky-600">{{$user->numero}}</div>
+        <p class="mt-2 flex items-center text-sky-800">Segundo numero</p>
+        <div class="mt-2 flex items-center text-sky-600">{{$user->numero_2}}</div>
+        <p class="mt-2 flex items-center text-sky-800">Username</p>
+        <div class="mt-2 flex items-center text-sky-600">{{$user->email}}</div>
+        <p class="mt-2 flex items-center text-sky-800">Saldo</p>
+        <div class="mt-2 flex items-center text-sky-600">{{$user->saldo}}</div>
+        <p class="mt-2 flex items-center text-sky-800">Grupo</p>
+        <div class="mt-2 flex items-center text-sky-600">{{$user->grupo->grado}} {{$user->grupo->grupo}}</div>
+    </div>
 @endsection

@@ -20,7 +20,7 @@ class MensajeController extends Controller
     public function index()
     {
         $escuela = Auth::user()->id;
-        $mensajes = Mensaje::where('id_emisor', $escuela)->paginate(7);
+        $mensajes = Mensaje::where('id_emisor', $escuela)->simplePaginate(7);
         return view('dashboard.mensaje.index', compact('mensajes'));
     }
 

@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Lista\StoreRequest;
 use App\Http\Requests\Lista\PutRequest;
+use App\Models\Grupo;
 use App\Models\Lista;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
 
 class ListaController extends Controller
 {
@@ -18,12 +20,13 @@ class ListaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $texto = trim($request->get('texto'));
         $escuela = Auth::user()->id_escuela;
         $lista = Lista::where('fecha', date('Y-m-d'))->pluck('id_alumno');
-        $listas = User::where('id_escuela', $escuela)->where('rol', 'tutor')->whereNotIn('id', $lista)->paginate(7);
-        return view('dashboard.lista.index', compact('listas', 'lista'));
+        $listas = User::where('id_escuela', $escuela)->where('rol', 'tutor')->whereNotIn('id', $lista)->where('name', 'like', '%' . $texto . '%')->orderBy('id_grupo', 'asc')->simplePaginate(7);
+        return view('dashboard.lista.index', compact('listas', 'lista', 'texto'));
     }
 
     /**

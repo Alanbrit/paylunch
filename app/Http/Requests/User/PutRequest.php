@@ -26,8 +26,8 @@ class PutRequest extends FormRequest
         return [
             "name" => "required|",
             "apellidos" => "required|",
-            "numero" => "required|",
-            "numero_2" => "required|",
+            "numero" => "",
+            "numero_2" => "",
             "saldo" => "integer",
             "email" => "required|unique:users,email,".$this->route("user")->id,
             "id_grupo" => "required|integer",

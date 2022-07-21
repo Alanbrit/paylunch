@@ -64,6 +64,10 @@ class User extends Authenticatable
     {
         return $this->belongsTo(School::class, 'id_escuela');
     }
+    public function grupos()
+    {
+        return $this->hasOne(Grupo::class);
+    }
         
 
 }

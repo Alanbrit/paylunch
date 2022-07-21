@@ -1,6 +1,5 @@
 @extends('dashboard.layout')
 @section('content')
-<h1>Actualizar mensaje</h1>
     @if ($errors->any())
     <div class="font-medium text-red-600">
             <p style="color:red;">{{ __('¡Vaya! Algo salió mal.') }}</p>
@@ -37,6 +36,7 @@
                 <input type="text" disabled="disabled" value="{{ Auth::user()->name }}  {{ Auth::user()->apellidos }}" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
             </div>
         </div>
-        <button type="submit">Enviar</button>
+        <br>
+        <button class="btn-verde" type="submit">Enviar</button>
     </form>
 @endsection

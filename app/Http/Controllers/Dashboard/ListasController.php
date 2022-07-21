@@ -21,7 +21,7 @@ class ListasController extends Controller
     public function index()
     {
         $escuela = Auth::user()->id_escuela;
-        $lista = Lista::where('id_escuela', $escuela)->paginate(7);
+        $lista = Lista::where('id_escuela', $escuela)->simplePaginate(7);
         return view('dashboard.listas.index', compact('lista'));
     }
 

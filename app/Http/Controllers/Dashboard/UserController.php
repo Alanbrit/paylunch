@@ -11,6 +11,7 @@ use App\Models\School;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -19,11 +20,12 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $texto = trim($request->get('texto'));
         $escuela = Auth::user()->id_escuela;
-        $users = User::where('id_escuela', $escuela)->where('rol', 'tutor')->paginate(7);
-        return view('dashboard.user.index', compact('users'));
+        $users = User::where('id_escuela', $escuela)->where('rol', 'tutor')->where('name', 'like', '%' . $texto . '%')->orderBy('id_grupo', 'asc')->simplePaginate(7);
+        return view('dashboard.user.index', compact('users', 'texto'));
     }
 
     /**

@@ -24,11 +24,10 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            "dia" => "required|min:5|max:500",
-            "guisado" => "required|min:5|max:500",
-            "sopa_guarnicion" => "required|min:5|max:500",
-            "agua" => "required|min:5|max:500",
-            "postre" => "required|min:5|max:500"
+            "guisado" => "required|min:1|max:500",
+            "sopa_guarnicion" => "required|min:1|max:500",
+            "agua" => "required|min:1|max:500",
+            "postre" => "required|min:1|max:500"
         ];
     }
 }

@@ -1,6 +1,8 @@
 @extends('dashboard.layout')
 @section('content')
-    <a href="{{ route("mensaje.create")}}">Crear</a>
+    <a class="btn-azul" href="{{ route("mensaje.create")}}">Crear</a>
+    <br>
+    <br>
     <table class="table">
         <thead>
             <tr>
@@ -37,21 +39,22 @@
                         {{ $m->receptor->name }} {{ $m->receptor->apellidos }}
                     </td>
                     <td>
-                        <a href="{{ route("mensaje.edit", $m)}}">Editar</a>
+                        <a class="btn-azul" href="{{ route("mensaje.edit", $m)}}">Editar</a>
                     </td>
                     <td>
-                        <a href="{{ route("mensaje.show", $m)}}">Ver</a>
+                        <a class="btn-verde" href="{{ route("mensaje.show", $m)}}">Ver</a>
                     </td>
                     <td>
                         <form action="{{ route("mensaje.destroy", $m)}}" method="POST">
                             @method("DELETE")
                             @csrf
-                            <button type="submit">Eliminar</button>
+                            <button class="btn-rojo" type="submit">Eliminar</button>
                         </form>
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
+    <br>
     {{ $mensajes->links()}}
 @endsection

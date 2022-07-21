@@ -26,6 +26,8 @@ class StoreRequest extends FormRequest
         return [
             "name" => "required",
             "apellidos" => "required",
+            "numero" => "",
+            "numero_2" => "",
             "saldo" => "integer",
             "email" => "required|unique:users",
             "password" => "required",

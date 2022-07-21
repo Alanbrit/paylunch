@@ -21,7 +21,7 @@ class MenuController extends Controller
     public function index()
     {
         $escuela = Auth::user()->id_escuela;
-        $menus = Menu::where('id_escuela', $escuela)->paginate(7);
+        $menus = Menu::where('id_escuela', $escuela)->simplePaginate(7);
         return view('dashboard.menu.index', compact('menus'));
     }
 

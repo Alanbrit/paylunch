@@ -1,6 +1,5 @@
 @extends('dashboard.layout')
 @section('content')
-<h1>Actualizar Menu</h1>
     @if ($errors->any())
     <div class="font-medium text-red-600">
             <p style="color:red;">{{ __('¡Vaya! Algo salió mal.') }}</p>
@@ -13,22 +12,42 @@
     </ul>
     @endif
 
-
-    <form action="{{ route('menu.update', $menu->id)}}" method="post" class="w-full">
+    <div class="w-full max-w-xs mx-auto">
+    <form action="{{ route('menu.update', $menu->id)}}" method="post">
         @csrf
         @method("PUT")
-        <div class="flex flex-wrap mb-2">
-            <label for="">Dia</label>
-            <input name="dia" value="{{ old('dia', $menu->dia) }}" disabled="disabled">
-            <label for="">Guisado</label>
-            <input name="guisado" value="{{ old('guisado', $menu->guisado) }}">
-            <label for="">Sopa</label>
-            <input name="sopa_guarnicion" value="{{ old('sopa_guarnicion', $menu->sopa_guarnicion) }}">
-            <label for="">Agua</label>
-            <input name="agua" value="{{ old('agua', $menu->agua) }}">
-            <label for="">Postre</label>
-            <input name="postre" value="{{ old('postre', $menu->postre) }}">
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="">
+                Dia
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="dia" value="{{ old('dia', $menu->dia) }}" disabled="disabled">
         </div>
-        <button type="submit">Enviar</button>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="">
+                Guisado
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="guisado" value="{{ old('guisado', $menu->guisado) }}">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="">
+                Sopa
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="sopa_guarnicion" value="{{ old('sopa_guarnicion', $menu->sopa_guarnicion) }}">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="">
+                Agua
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="agua" value="{{ old('agua', $menu->agua) }}">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="">
+                Postre
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="postre" value="{{ old('postre', $menu->postre) }}">
+        </div>
+        <button class="button" type="submit">Enviar</button>
     </form>
+    </div>
+    
 @endsection

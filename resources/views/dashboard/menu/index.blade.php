@@ -42,7 +42,7 @@
                         {{ $m->postre }} 
                     </td>
                     <td>
-                        <a href="{{ route("menu.edit", $m)}}">Editar</a>
+                        <a class="btn-azul" href="{{ route("menu.edit", $m)}}">Editar</a>
                     </td>
                 </tr>
             @endforeach
