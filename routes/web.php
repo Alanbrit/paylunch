@@ -27,7 +27,6 @@ Route::get('/', function () {
 });
 
 
-
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', "admin"]], function () {
     Route::get('/', function(){
         return view('dashboard');
@@ -41,4 +40,13 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', "admin"]], funct
     ]);
 });
 
+Route::group(['prefix' => 'tutor', 'middleware' => ['auth', "tutor"]], function () {
+    Route::get('/', function(){
+        return view('index');
+    })->name("tutor");
+    Route::resources([
+        'menut' => App\Http\Controllers\Tutor\MenuController::class
+        
+    ]);
+});
 require __DIR__.'/auth.php';

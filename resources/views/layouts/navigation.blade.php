@@ -99,6 +99,24 @@
                     </x-responsive-nav-link>
                 </form>
             </div>
+
+            <div class="mt-4 space-y-1">
+                    <x-responsive-nav-link :href="route('user.index')" :active="request()->routeIs('user.index')">
+                        {{ __('Usuarios') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('mensaje.index')" :active="request()->routeIs('mensaje.index')">
+                        {{ __('Mensajes') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
+                        {{ __('Menu') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('lista.index')" :active="request()->routeIs('lista.index')">
+                        {{ __('Pasar lista') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('listas.index')" :active="request()->routeIs('listas.index')">
+                        {{ __('Registros de asistencia') }}
+                    </x-responsive-nav-link>
+            </div>
         </div>
     </div>
 </nav>

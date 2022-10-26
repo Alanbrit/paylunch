@@ -55,7 +55,7 @@
                         {{ $m->grupo->grado }} {{ $m->grupo->grupo}}
                     </td>
                     <td class="text-center">
-                        @if($m->saldo > 0)
+                        @if($m->saldo >= 0)
                             <a class="text-green-900 font-bold"> {{ $m->saldo }} <a>
                             @else
                             <a class="text-red-900 font-bold"> {{ $m->saldo }} <a>

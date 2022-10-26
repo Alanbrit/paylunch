@@ -18,7 +18,7 @@
 	</head>
 	<body>
 		<header>
-			<section class="hero">
+			<section class="hero2">
 				<div class="texture-overlay"></div>
 				<div class="container">
 					<div class="row nav-wrapper">
@@ -29,10 +29,41 @@
 							<p>MENU</p><a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
 						</div>
 					</div>
+					<br><br><br><br><br><br><br>
 					<div class="row hero-content">
-						<div class="col-md-12">
-							<h1 class="animated fadeInDown">Bienvenido tutor de: {{ Auth::user()->name }} {{ Auth::user()->apellidos }}</h1>
-						</div>
+						<table class="table table01">
+						  <thead>
+						    <tr>
+						      <th scope="col">Dia</th>
+						      <th scope="col">Sopa/guarnición</th>
+						      <th scope="col">Guisado</th>
+						      <th scope="col">Agua</th>
+						      <th scope="col">Postre</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+							@foreach ($menus as $m)
+						    <tr>
+						      <th scope="row">
+							  		{{ $m->dia }}
+							  </th>
+						      <td>
+							  		{{ $m->guisado }}
+							  </td>
+							  <td>
+							  		{{ $m->sopa_guarnicion }}
+							  </td>
+							  <td>
+							  		{{ $m->agua }}
+							  </td>
+							  <td>
+							  		{{ $m->postre }}
+							  </td>
+						      
+						    </tr>
+							@endforeach
+						  </tbody>
+						</table>
 					</div>
 				</div>
 			</section>
@@ -45,7 +76,7 @@
 						<h1 class="footer-logo">
 						<img src="{{ asset('static/img/logo-blue.png')}}" alt="Footer Logo Blue">
 						</h1>
-						<p>© Dinamita 2022</p>
+						<p>© Boxify 2015 - <a href="http://tympanus.net/codrops/licensing/">Licence</a> - Designed &amp; Developed by <a href="http://www.peterfinlan.com/">Peter Finlan</a></p>
 					</div>
 					<div class="col-md-7">
 						
@@ -61,7 +92,7 @@
 				</ul>
 				<ul>
 					<li><a href="#"><i class="fa fa-comment"></i>Mensajes</a></li>
-					<li><a href="{{ asset('tutor/menu')}}"><i class="fa fa-cutlery"></i>Menú</a></li>
+					<li><a href="#"><i class="fa fa-cutlery"></i>Menú</a></li>
 				</ul>
                 <ul>
                     <form method="POST" action="{{ route('logout') }}">
@@ -75,7 +106,7 @@
 			</nav>
 		</div>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="{{ asset('static/js/min/toucheffects-min.js')}}"></script>
+        <script src="{{ asset('static/js/min/toucheffects-min.js')}}"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="{{ asset('static/js/flickity.pkgd.min.js')}}"></script>
 		<script src="{{ asset('static/js/jquery.fancybox.pack.js')}}"></script>
